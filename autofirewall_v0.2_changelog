@@ -1,0 +1,15 @@
+                   autofirewall_v0.2.sh
+
+-rewrote pf.conf section with more granular rules eg $int:network and in and out rules for both sides of firewall.
+
+-removed all functions except install and remove think one program one task.
+
+-made sure to remove /usr/local/etc/dhcpd.conf during removal process.
+
+-made the defaults more secure for the user by disabling sshd and syslogd udp listening port. with sshd_enable="NO" and syslogd_flags="-ss" inside of /etc/rc.conf.
+
+-made hash feature that appends a unique id hash to the end of the systems hostname and all config files made by auto_firewall. This is LOCAL ONLY. for the sole purpose of making managing multiple systems easier. (Thanks to "mow" for help with hashing code.)
+
+-fixed date format in all files made by auto_firewall.
+
+-cleaned up code and added detailed comments.
